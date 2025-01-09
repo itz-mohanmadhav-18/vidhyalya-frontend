@@ -1,7 +1,7 @@
 import React from 'react'
 import NavBar from './NavBar'
 import HeroSection from './HeroSection'
-import heroVideo from '../assets/hero_video.mp4'
+import heroVideo from '../../assets/hero_video.mp4'
 
 const Section1 = () => {
   return (

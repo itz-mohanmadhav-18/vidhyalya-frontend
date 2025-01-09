@@ -1,6 +1,6 @@
 import React from 'react'
-import logo from '../assets/logo.png'
-import admissionForm from './admissionForm'
+import logo from '../../assets/logo.png'
+import admissionForm from '../admissionForm'
 
 const NavBar = () => {
   return (

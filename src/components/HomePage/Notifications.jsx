@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../index.css';
+import '../../index.css';
 
 const NotificationBoard = () => {
   const [isVisible, setIsVisible] = useState(false);

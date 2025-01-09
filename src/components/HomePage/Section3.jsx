@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import vision1 from '../assets/vision1.jpeg';
-import vision2 from '../assets/vision2.jpeg';
-import vision3 from '../assets/vision3.jpg';
+import vision1 from '../../assets/vision1.jpeg';
+import vision2 from '../../assets/vision2.jpeg';
+import vision3 from '../../assets/vision3.jpg';
 import useScrollAnimation from "./animation.jsx";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 

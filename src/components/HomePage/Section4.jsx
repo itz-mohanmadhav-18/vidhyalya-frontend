@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import schoolImage from '../assets/school.jpg';
-import director from '../assets/director.png';
+import schoolImage from '../../assets/school.jpg';
+import director from '../../assets/director.png';
 
 const Section4 = () => {
   const sectionRef = useRef(null);

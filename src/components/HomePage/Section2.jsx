@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
-import campusesGif from '../assets/Campuses.gif';
-import students320Gif from '../assets/320Students.gif';
-import Globe from '../assets/Globe.gif';
-import students from '../assets/12perClass.gif';
-import ratio from '../assets/Ratio.gif';
-import electives from '../assets/Electives.gif'
+import campusesGif from '../../assets/Campuses.gif';
+import students320Gif from '../../assets/320Students.gif';
+import Globe from '../../assets/Globe.gif';
+import students from '../../assets/12perClass.gif';
+import ratio from '../../assets/Ratio.gif';
+import electives from '../../assets/Electives.gif'
 import useScrollAnimation from "./animation.jsx";
 
 
