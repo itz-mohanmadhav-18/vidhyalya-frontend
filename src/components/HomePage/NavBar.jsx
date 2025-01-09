@@ -10,7 +10,7 @@ const NavBar = () => {
             <img src={logo} alt="" width="20%" className="float-left drop-shadow-[0_0_3px_white]"/>
             <ul className="flex justify-between items-center flex-row gap-5 text-base text-beige">
                 <Link to="/"><li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm"><a href="">Home</a></li></Link>
-                <Link to="/admission"><li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm"><a href="">Admission</a></li></Link>
+                <Link to="/admissions"><li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm"><a href="">Admission</a></li></Link>
                 <Link to="/career"><li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm"><a href="">Career</a></li></Link>
                 <Link to="/about"><li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm"><a href="">About</a></li></Link>
             </ul>
