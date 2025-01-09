@@ -75,4 +75,31 @@
     width:  calc(var(--s)*var(--f));
     height: calc(var(--s)*var(--f));
   }
+
+  .spin-container {
+    position: relative;
+    width: 25%;
+    height: auto;
+    transform-style: preserve-3d;
+    animation: spin 5s linear infinite;
+  }
+  .spin-container img{
+    filter: drop-shadow(10px 10px black);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotateY(0deg);
+      filter:brightness(1);
+    }
+    50% {
+        transform: rotateY(180deg);
+        filter:brightness(0.5);
+    }
+    100% {
+      transform: rotateY(360deg);
+      filter:brightness(1);
+    }
+  }
+  
   

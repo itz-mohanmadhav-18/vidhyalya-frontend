@@ -1,5 +1,6 @@
 import React from 'react';
-import heroImage from '../../assets/hero_image.png';
+import heroImage from '../../assets/hero_image1.png';
+import '../../index.css'
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,9 @@ const HeroSection = () => {
             Apply for Admission
           </a>
         </div>
-        <img src={heroImage} alt="Hero" width="30%" />
+        <div className="spin-container">
+          <img src={heroImage} alt="Hero" className="drop-shadow-[1px_1px_0_black)"/>
+        </div>
       </div>
     </div>
   );
