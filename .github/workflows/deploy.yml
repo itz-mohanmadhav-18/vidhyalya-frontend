@@ -22,9 +22,11 @@ jobs:
 
       - name: Build the project
         run: npm run build
+
       # Step 5: Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub provides this token automatically
-          publish_dir: ./build  # This is the build output folder for React
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist  # Changed from ./build to ./dist for Vite
+          force_orphan: true
