@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './index.css';
-import Homepage from './components/Homepage';
+import Homepage from './components/HomePage';
 
 
 function App() {
