@@ -6,7 +6,7 @@ import AdmissionPage from './components/AdmissionPage'; // Corrected default imp
 import ErrorPage from './components/OtherPages/NotFound';
 import UnderDevelopment from './components/OtherPages/underDevelopment';
 import CareerPage from './components/CareerPage';
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
