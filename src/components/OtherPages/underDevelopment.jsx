@@ -1,11 +1,9 @@
 import React from 'react';
 
-function UnderDevelopment() {
+export default function UnderDevelopment() {
     return (
         <div>
-            <h1 className="text-2xl font-bold "></h1>
+            <h1 className="text-2xl font-bold text-red-500 ">this page is under development</h1>
         </div>
     );
 }
-
-export default UnderDevelopment;

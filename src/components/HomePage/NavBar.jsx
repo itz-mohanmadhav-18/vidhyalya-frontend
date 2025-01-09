@@ -1,6 +1,6 @@
 import React from 'react'
 import logo from '../../assets/logo.png'
-import admissionForm from '../admissionForm'
+import admissionForm from '../AdmissionPage/admissionForm'
 
 const NavBar = () => {
   return (
@@ -19,4 +19,4 @@ const NavBar = () => {
   )
 }
 
-export default NavBar
+export default NavBar;
