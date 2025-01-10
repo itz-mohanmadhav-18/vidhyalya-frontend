@@ -40,7 +40,7 @@ export default function Homepage() {
       }, []);
     
       return (
-        <>
+        <div className='flex flex-col'>
           <Section1 />
           <EaseOfAccessSection />
           <Section2 />
@@ -51,6 +51,6 @@ export default function Homepage() {
           <Section7 />
           <Notifications />
           <Footer />
-        </>
+        </div>
       );
 }
