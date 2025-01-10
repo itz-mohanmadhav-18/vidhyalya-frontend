@@ -9,6 +9,8 @@ import Section6 from './HomePage/Timeline';
 import Section7 from './HomePage/Section7';
 import Notifications from './HomePage/Notifications';
 import Footer from './HomePage/Footer';
+import EaseOfAccessSection from './HomePage/EaseOfAccessSection';
+
 
 export default function Homepage() {
     useEffect(() => {
@@ -40,6 +42,7 @@ export default function Homepage() {
       return (
         <>
           <Section1 />
+          <EaseOfAccessSection />
           <Section2 />
           <Section3 />
           <Section4 />
