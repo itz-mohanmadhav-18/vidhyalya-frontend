@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "http://mohanmadhavsinghal.tech/vidhyalya-frontend",
+  "homepage": "https://vidhyalay.mohanmadhavsinghal.tech",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
