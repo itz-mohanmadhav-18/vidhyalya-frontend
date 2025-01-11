@@ -13,12 +13,12 @@ const NavBar = () => {
     <div>
       {/* Top Nav */}
       <div className="w-full bg-none">
-        <div className="flex justify-between items-center py-2 px-5">
+        <div className="flex justify-between items-center py-2 px-5 ">
           {/* Logo */}
           <img 
             src={logo} 
             alt="Logo" 
-            className="w-1/4 md:w-1/6 lg:w-1/8 drop-shadow-[0_0_3px_white]" 
+            className="min-w-20 min-h-11  w-1/4 md:w-1/6 lg:w-1/8 drop-shadow-[0_0_3px_white]" 
           />
 
           {/* Hamburger Icon (Visible on small screens) */}
