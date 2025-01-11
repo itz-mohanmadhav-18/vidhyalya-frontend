@@ -30,6 +30,7 @@
     -webkit-background-clip: text;
     transition: background-size linear forwards;
     position: relative;
+    overflow:hidden;
 }
 .headings::after, .headings::before{
     content: " ";
@@ -45,6 +46,16 @@
 }
 .headngs::before{
     left: 0;
+}
+@media (max-width: 950px) {
+  .headings::after{
+    width: 100%;
+    position: relative;
+    border-bottom: 0.5px solid #ccc;
+  }
+  .headings::before {
+      display: none;
+  }
 }
 .animate-on-scroll {
     transform: translateY(100px) scale(0.4);

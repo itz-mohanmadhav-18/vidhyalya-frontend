@@ -12,7 +12,7 @@ import pic9 from '../../assets/pic9.jpeg';
 const Section5 = () => {
   return (
     <div className="bg-beige py-10"> 
-        <h1 className="headings justify-self-center w-fit bg-gradient-to-r from-[#fff] to-[#fff]">
+        <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-[#fff] to-[#fff]">
           Gallery
         </h1>
         <div className="flex justify-center items-center gap-8 flex-wrap m-3 ">

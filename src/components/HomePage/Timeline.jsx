@@ -134,7 +134,7 @@ export default function SchoolTimeline() {
 
   return (
     <div className="py-10 pb-20">
-      <h1 className="headings justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
+      <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
         Events
       </h1>
       <div>

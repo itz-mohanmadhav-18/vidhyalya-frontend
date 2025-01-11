@@ -36,10 +36,10 @@ const VisionCards = () => {
 
   return (
     <div className="pt-10 px-6 pb-24 space-y-16 bg-gradient-to-br from-white via-beige to-white">
-      <h1 className="headings justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
+      <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
         Vision
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 scrollbar-hide">
         {visions.map((vision, index) => (
           <div
             key={index}
