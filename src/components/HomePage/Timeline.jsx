@@ -133,7 +133,6 @@ export default function SchoolTimeline() {
   const sortedEvents = sortEvents(events);
   const timelineRef = useRef(null);
   const [timelineWidth, setTimelineWidth] = useState(0);
-  const [isPaused, setIsPaused] = useState(false);
 
   useEffect(() => {
     if (timelineRef.current) {
@@ -226,7 +225,7 @@ export default function SchoolTimeline() {
       }
       @keyframes animatetimeline {
         0% { transform: translateX(0); }
-        95% { transform: translateX(-85%); }
+        95% { transform: translateX(-100%); }
         100% { transform: translateX(0); }
       }
       .animate-timeline:hover {
