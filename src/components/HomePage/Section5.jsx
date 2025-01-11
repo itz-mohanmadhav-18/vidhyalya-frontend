@@ -15,7 +15,7 @@ const Section5 = () => {
         <h1 className="headings justify-self-center w-fit bg-gradient-to-r from-[#fff] to-[#fff]">
           Gallery
         </h1>
-        <div className="flex justify-center items-center gap-8 flex-wrap ">
+        <div className="flex justify-center items-center gap-8 flex-wrap m-3 ">
             <div className="gallery">
                 <img src={pic1} alt="a forest after an apocalypse" />
                 <img src={pic2} alt="a waterfall and many rocks" />
@@ -27,7 +27,7 @@ const Section5 = () => {
                 <img src={pic8} alt="inside a town between two big buildings" />
                 <img src={pic9} alt="a great view of the sea above the mountain" />
             </div>
-            <div className="gallery">
+            <div className="gallery !hidden md:!grid ">
                 <img src={pic1} alt="a forest after an apocalypse" />
                 <img src={pic2} alt="a waterfall and many rocks" />
                 <img src={pic3} alt="a house on a mountain" />

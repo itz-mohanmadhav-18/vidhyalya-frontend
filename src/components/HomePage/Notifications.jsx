@@ -27,7 +27,7 @@ const NotificationBoard = () => {
       {/* Blackboard Notification Board */}
       {isVisible && (
         <div
-          className="fixed bottom-24 right-6 w-[400px] h-[360px] overflow-y-auto   bg-[#383838] border-[12px] border-t-[#bda27e] border-l-[#b19876] border-b-[#c9ad86] border-r-[#b19876] rounded-lg z-50 transition-all duration-300 transform scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-900"
+          className="fixed bottom-24 w-[350px] h-[350px] right-6 sm:w-[400px] sm:h-[360px] overflow-y-auto   bg-[#383838] border-[12px] border-t-[#bda27e] border-l-[#b19876] border-b-[#c9ad86] border-r-[#b19876] rounded-lg z-50 transition-all duration-300 transform scrollbar-thin scrollbar-thumb-gray-800 scrollbar-track-gray-900"
           style={{
             boxShadow: "0px 0px 6px 5px rgba(58, 18, 13, 0), 0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 3px 4px 8px 5px rgba(0, 0, 0, 0.5)",
             backgroundImage: 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACmGA8nAAAAEElEQVQImWP4//8/wygAAgAB/xwVO9YAAAAASUVORK5CYII=")', // Subtle texture

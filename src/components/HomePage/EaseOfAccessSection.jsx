@@ -5,7 +5,7 @@ const Icons = {
   Admission: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -19,7 +19,7 @@ const Icons = {
   Profile: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -34,7 +34,7 @@ const Icons = {
   Fee: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -50,7 +50,7 @@ const Icons = {
   Complaint: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -66,7 +66,7 @@ const Icons = {
   Timetable: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -83,7 +83,7 @@ const Icons = {
   Career: () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      className="w-6 h-6"
+      className="w-5 h-5 sm:w-7 sm:h-7"
       viewBox="0 0 24 24"
       fill="none"
       stroke="currentColor"
@@ -101,7 +101,7 @@ const Icons = {
 const ActionCard = ({ icon: Icon, title, onClick, colorClass }) => (
   <div
     onClick={onClick}
-    className={`group flex flex-col items-center p-4 rounded-xl shadow-sm transition-all duration-300 cursor-pointer my-10 ${colorClass} bg-opacity-10 hover:${colorClass} hover:bg-opacity-20`}
+    className={`group flex flex-col items-center p-4 rounded-xl shadow-sm transition-all duration-300 cursor-pointer my-2 sm:my-5 ${colorClass} bg-opacity-10 hover:${colorClass} hover:bg-opacity-20`}
   >
     {/* Icon container */}
     <div className={`p-4 rounded-full mb-3 bg-white`}>
@@ -111,7 +111,7 @@ const ActionCard = ({ icon: Icon, title, onClick, colorClass }) => (
     </div>
 
     {/* Heading */}
-    <h3 className="text-lg font-semibold text-gray-800 text-center">
+    <h3 className="text-sm sm:text-lg font-semibold text-gray-800 text-center">
       {title}
     </h3>
   </div>
@@ -166,7 +166,7 @@ export default function EaseOfAccessSection() {
     <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center my-10 px-6">
-        <h1 className="headings bg-gradient-to-r from-maroon-text to-maroon-text">
+        <h1 className="headings bg-gradient-to-r from-maroon-text to-maroon-text !text-xl sm:!text-3xl md:!text-4xl lg:!text-5xl">
           Quick Actions
         </h1>
       </div>
