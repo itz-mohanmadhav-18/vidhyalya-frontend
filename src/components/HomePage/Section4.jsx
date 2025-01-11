@@ -26,7 +26,7 @@ const Section4 = () => {
   return (
     <section
       ref={sectionRef}
-      className={`p-3 -z-20 relative h-screen bg-center flex items-center justify-evenly text-white ${
+      className={`p-0 md:p-3 -z-20 relative h-screen bg-center flex items-center justify-evenly text-white ${
         isVisible ? "animate-visible" : ""
       }`}
       style={{
@@ -34,9 +34,10 @@ const Section4 = () => {
       }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-maroon opacity-50"></div>
-      <div className="relative text-left px-8 py-8 w-96 max-w-3xl leading-tight h-fit backdrop-blur-md">
+      <div className="flex justify-between items-center lg:items-start w-full md:w-3/4 flex-col md:flex-row">
+        <div className="relative mb-3 md:mb-0 md:mr-5 text-left px-6 py-6 md:px-8 md:py-8 md:w-96 md:max-w-3xl leading-tight h-fit backdrop-blur-md">
         <h4
-          className={`text-beige relative text-lg -mb-2 font-extrabold ${
+          className={`text-beige relative text-sm md:text-md md:-mb-2 font-extrabold ${
             isVisible ? "animate-fade-in-up" : ""
           }`}
           style={{ animationDelay: "0.2s" }}
@@ -44,7 +45,7 @@ const Section4 = () => {
           Welcome Message from Principal
         </h4>
         <h1
-          className={`text-6xl font-black mb-6 leading-tight ${
+          className={`text-1xl md:text-4xl lg:text-6xl font-black mb-6 xs:leading-tight md:leading-tight lg:leading-tight ${
             isVisible ? "animate-fade-in-up" : ""
           }`}
           style={{ animationDelay: "0.4s" }}
@@ -52,7 +53,7 @@ const Section4 = () => {
           We Innovate, We Execute
         </h1>
         <p
-          className={`text-lg leading-relaxed text-justify font-serif italic ${
+          className={`text-xs md:text-md lg:text-lg leading-relaxed text-justify font-serif italic ${
             isVisible ? "animate-fade-in-up" : ""
           }`}
           style={{ animationDelay: "0.6s" }}
@@ -62,7 +63,7 @@ const Section4 = () => {
           of any organization.
         </p>
         <p
-          className={`mt-6 font-extrabold text-xl text-beige ${
+          className={`mt-6 font-extrabold text-sm md:text-xl text-beige ${
             isVisible ? "animate-fade-in-up" : ""
           }`}
           style={{ animationDelay: "0.8s" }}
@@ -70,12 +71,12 @@ const Section4 = () => {
           ~ Dr. John Doe
         </p>
       </div>
-      <div className="relative">
+      <div className="relative w-[45vw] sm:w-[30vw] md:w-3/4 lg:w-1/2">
         <img src={director} className="drop-shadow-[0_0_3px_beige] rounded-full scale-[0.7] floating-animation" alt="" />
         <div style={{ borderRadius: "30% 70% 70% 30% / 30% 30% 70% 70%", }}
           className="absolute -z-10 top-0 left-0 w-full h-full bg-gradient-to-r from-maroon via-brown to-beige animated-gradient">
         </div>
-      </div>
+      </div></div>
 
       <style>
         {`

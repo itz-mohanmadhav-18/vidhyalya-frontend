@@ -113,7 +113,7 @@ const AchievementsSection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         <div className="relative mb-12 md:mb-20 flex flex-col items-center justify-center">
-          <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl w-fit text-3xl md:text-4xl lg:text-5xl bg-gradient-to-r from-maroon-text to-maroon-text mb-4">
+          <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl w-fit bg-gradient-to-r from-maroon-text to-maroon-text mb-4">
             Achievements
           </h1>
           <p className="text-base md:text-md text-gray max-w-2xl text-center px-4">

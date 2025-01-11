@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCalendarDay,
@@ -131,6 +131,24 @@ const sortEvents = (events) => {
 
 export default function SchoolTimeline() {
   const sortedEvents = sortEvents(events);
+  const timelineRef = useRef(null);
+  const [timelineWidth, setTimelineWidth] = useState(0);
+  const [isPaused, setIsPaused] = useState(false);
+
+  useEffect(() => {
+    if (timelineRef.current) {
+      setTimelineWidth(timelineRef.current.scrollWidth);
+    }
+  }, [sortedEvents]);
+
+  const animationDuration = Math.max(timelineWidth / 100, 10);
+
+  const handleScroll = (direction) => {
+    if (timelineRef.current) {
+      const scrollAmount = 300;
+      timelineRef.current.scrollLeft += direction === "right" ? scrollAmount : -scrollAmount;
+    }
+  };
 
   return (
     <div className="py-10 pb-20">
@@ -138,14 +156,19 @@ export default function SchoolTimeline() {
         Events
       </h1>
       <div>
-        <div className="animate-on-scroll relative mt-8 overflow-x-auto scrollbar-hide">
-          <div className="relative flex items-center w-max mx-auto h-[70vh] before:w-full before:h-2 before:border-b-2 before:absolute before:top-10 before:left-0 before:border-dashed before:border-light-brown after:w-full after:h-2 after:absolute after:bottom-10 after:left-0 after:border-t-2 after:border-dashed after:border-light-brown after:-z-50 before:shadow-[0_-3px_4px_gray] after:shadow-[0_3px_4px_gray]">
+        <div className="animate-on-scroll relative sm:mt-8 overflow-x-auto scrollbar-hide">
+          <div
+            ref={timelineRef}
+            style={{
+              animationDuration: `${animationDuration}s`,
+            }}
+            className="relative flex animate-timeline transition-transform ease items-center w-max mx-auto h-[70vh] before:w-full before:h-2 before:border-b-2 before:absolute before:top-10 before:left-0 before:border-dashed before:border-light-brown after:w-full after:h-2 after:absolute after:bottom-10 after:left-0 after:border-t-2 after:border-dashed after:border-light-brown after:-z-50 before:shadow-[0_-3px_4px_gray] after:shadow-[0_3px_4px_gray]">
             <div className="absolute top-1/2 left-0 w-full h-1 bg-beige"></div>
             {sortedEvents.map((event, index) => {
               return (
                 <div
                   key={index}
-                  className={`flex flex-col items-center justify-center relative px-6 w-[435px] overflow-visible cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_5px_gray] ${
+                  className={`flex flex-col items-center justify-center relative px-6 w-[250px] md:w-[435px] overflow-visible cursor-pointer transition-transform duration-300 ease-in-out hover:scale-105 hover:drop-shadow-[0_0_5px_gray] ${
                     index % 2 === 0
                       ? "translate-y-[30px]"
                       : "-translate-y-[30px]"
@@ -153,8 +176,8 @@ export default function SchoolTimeline() {
                 >
                   {/* Circle marker */}
                   <div
-                    className={`absolute left-[180px] bg-white border-4 border-beige text-brown text-2xl p-5 rounded-full ${
-                      index % 2 === 0 ? "top-0" : "bottom-0"
+                    className={`absolute left-[100px] md:left-[180px] bg-white border-4 border-beige text-brown text-lg md:text-2xl p-2 md:p-5 rounded-full ${
+                      index % 2 === 0 ? "top-8 md:top-0" : "bottom-8 md:bottom-0"
                     }`}
                   >
                     <FontAwesomeIcon icon={event.icon} />
@@ -177,7 +200,7 @@ export default function SchoolTimeline() {
                     ></div>
                     <div className="font-bold">{event.date}</div>
                     <div className="italic">{event.time}</div>
-                    <div className="mt-1 text-xl text-white">{event.title}</div>
+                    <div className="mt-1 text-base md:text-xl text-white">{event.title}</div>
                     <div className="text-light-brown text-xs mt-2 text-center italic">
                       {event.description}
                     </div>
@@ -185,9 +208,32 @@ export default function SchoolTimeline() {
                 </div>
               );
             })}
+            <div className="flex flex-col items-center justify-center relative px-6 w-[250px] md:w-[435px] overflow-visible">
+              <div
+                className="relative flex items-center justify-center flex-col bg-dark-brown text-beige text-sm rounded-md px-4 py-6 overflow-visible shadow-[5px_5px_0_gray]"
+              >
+                  <div className="text-lg md:text-2xl font-bold text-white">
+                    End of Timeline
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <style>{`
+      .animate-timeline{
+      animation: animatetimeline linear infinite;
+      }
+      @keyframes animatetimeline {
+        0% { transform: translateX(0); }
+        95% { transform: translateX(-85%); }
+        100% { transform: translateX(0); }
+      }
+      .animate-timeline:hover {
+        animation-play-state: paused;
+      }
+      `}
+      </style>
     </div>
   );
 }
