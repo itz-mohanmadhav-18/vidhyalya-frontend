@@ -163,10 +163,10 @@ export default function EaseOfAccessSection() {
   ];
 
   return (
-    <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4">
+    <div className="bg-gradient-to-br from-gray-50 to-gray-100 py-16 px-4 -mt-20 md:-mt-0">
       {/* Heading */}
       <div className="flex flex-col justify-center items-center my-10 px-6">
-        <h1 className="headings bg-gradient-to-r from-maroon-text to-maroon-text !text-xl sm:!text-3xl md:!text-4xl lg:!text-5xl">
+        <h1 className="headings bg-gradient-to-r from-maroon-text to-maroon-text !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl">
           Quick Actions
         </h1>
       </div>
