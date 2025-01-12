@@ -18,7 +18,7 @@ const NotificationBoard = () => {
     <>
       {/* Notification Bell Icon */}
       <div
-        className="fixed hidden-scrollbar bottom-6 right-6 text-3xl cursor-pointer z-50 bg-black text-yellow-300 p-3 px-4 rounded-full shadow-xl hover:scale-110 transition-all duration-300 hover:bg-gray"
+        className="fixed hidden-scrollbar bottom-6 right-6 text-3xl cursor-pointer z-30 bg-black text-yellow-300 p-3 px-4 rounded-full shadow-xl hover:scale-110 transition-all duration-300 hover:bg-gray"
         onClick={toggleBoard}
       >
         <i className="fas fa-bell animate-pulse "></i>

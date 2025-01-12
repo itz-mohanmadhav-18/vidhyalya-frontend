@@ -1,7 +1,7 @@
 import React from "react";
 import logo from '../../assets/logo.png';
 
-const Footer = () => {
+const Footer = ({ openContactForm }) => {
   return (
     <footer className="bg-dark-brown text-white p-16 h-fit">
       {/* Top Section with Logo and Social Icons */}
@@ -9,7 +9,7 @@ const Footer = () => {
         {/* Logo */}
         <div className="mb-4 md:mb-0">
           <img
-            src={logo} // Replace with your logo's path
+            src={logo}
             alt="Logo"
             className="h-16 drop-shadow-[2px_2px_1px_beige]"
           />
@@ -67,7 +67,12 @@ const Footer = () => {
 
         {/* Contact Section */}
         <div className="flex flex-col items-center md:items-start">
-          <h3 className="text-lg font-semibold">Contact Us</h3>
+          <button 
+            onClick={openContactForm}
+            className="text-lg font-semibold hover:text-light-brown underline"
+          >
+            Contact Us
+          </button>
           <address className="not-italic mt-4 text-sm leading-relaxed">
             7165 Burton Avenue <br />
             Rohnert Park, CA 94928
@@ -87,37 +92,37 @@ const Footer = () => {
           <div className="flex flex-col space-y-3 text-md">
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               District Resources
             </a>
             <a
               href="#"
-              className="t hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Careers
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Use of Facilities
             </a>
-            <a
-              href="#"
-              className=" hover:text-light-brown"
+            <button
+              onClick={openContactForm}
+              className="text-left hover:text-light-brown"
             >
               Contact Us
-            </a>
+            </button>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Uniform Complaint Procedure
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Title IX
             </a>
@@ -125,31 +130,31 @@ const Footer = () => {
           <div className="flex flex-col space-y-3 text-md">
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Find Your School
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               School Locations Map
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Family Resources
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               School Calendar
             </a>
             <a
               href="#"
-              className=" hover:text-light-brown"
+              className="hover:text-light-brown"
             >
               Enrollment Information
             </a>
