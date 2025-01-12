@@ -63,7 +63,7 @@ export default function ContactUsForm({ isOpen, onClose }) {
               <div>
                 <label 
                   htmlFor="name" 
-                  className="block text-sm font-medium text-yellow-200 mb-1"
+                  className="block text-sm font-medium text-beige mb-1"
                   style={chalkboardText}
                 >
                   Name
@@ -75,14 +75,14 @@ export default function ContactUsForm({ isOpen, onClose }) {
                   required
                   value={formData.name}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-300 transition-colors duration-200"
+                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:border-beige focus:ring-1 focus:ring-beige transition-colors duration-200"
                 />
               </div>
 
               <div>
                 <label 
                   htmlFor="email" 
-                  className="block text-sm font-medium text-yellow-200 mb-1"
+                  className="block text-sm font-medium text-beige mb-1"
                   style={chalkboardText}
                 >
                   Email
@@ -94,14 +94,14 @@ export default function ContactUsForm({ isOpen, onClose }) {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-300 transition-colors duration-200"
+                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none  focus:border-beige focus:ring-1 focus:ring-beige transition-colors duration-200"
                 />
               </div>
 
               <div>
                 <label 
                   htmlFor="query" 
-                  className="block text-sm font-medium text-yellow-200 mb-1"
+                  className="block text-sm font-medium text-beige mb-1"
                   style={chalkboardText}
                 >
                   Your Message
@@ -113,13 +113,13 @@ export default function ContactUsForm({ isOpen, onClose }) {
                   value={formData.query}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-300 transition-colors duration-200 max-h-48"
+                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-beige focus:ring-1 focus:ring-beige transition-colors duration-200 max-h-48"
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-yellow-500 text-gray-900 py-2 px-4 rounded-md hover:bg-yellow-400 transition duration-200 font-bold"
+                className="w-full bg-beige text-gray-900 py-2 px-4 rounded-md hover:bg-beige transition duration-200 font-bold"
                 style={chalkboardText}
               >
                 Send Message
