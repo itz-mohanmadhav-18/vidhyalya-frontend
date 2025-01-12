@@ -113,7 +113,7 @@ export default function ContactUsForm({ isOpen, onClose }) {
                   value={formData.query}
                   onChange={handleChange}
                   rows={4}
-                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-300 transition-colors duration-200"
+                  className="w-full px-3 py-2 bg-white text-black border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-yellow-300 focus:ring-1 focus:ring-yellow-300 transition-colors duration-200 max-h-48"
                 />
               </div>
 
