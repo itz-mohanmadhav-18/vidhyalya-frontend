@@ -6,8 +6,18 @@ import Testimonials from './CareerPage/Testimonials'
 import Jobs from './CareerPage/Jobs'
 import Values from './CareerPage/Values'
 import Notifications from './HomePage/Notifications'
+import ContactUsForm from './HomePage/ContactUsForm';
 
 export default function CareerPage() {
+    const [isContactFormOpen, setContactFormOpen] = useState(false);
+    const openContactForm = () => {
+      setContactFormOpen(true);
+    };
+  
+    const closeContactForm = () => {
+      setContactFormOpen(false);
+    };
+
   useEffect(() => {
       const handleScroll = () => {
         document.querySelectorAll(".headings").forEach((heading) => {
@@ -34,13 +44,15 @@ export default function CareerPage() {
       };
 }, []);
   return (
+
     <div>
       <Notifications />
       <Hero />
       <Testimonials />
       <Jobs />
       <Values />
-      <Footer />
+      <Footer openContactForm={openContactForm} />
+      <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </div>
   )
 }
