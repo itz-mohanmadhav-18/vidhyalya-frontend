@@ -1,12 +1,19 @@
 import React from 'react';
-import Navbar from './HomePage/NavBar'
 import Footer from './HomePage/Footer'
+import Hero from './CareerPage/HeroSection'
+import Testimonials from './CareerPage/Testimonials'
+import Jobs from './CareerPage/Jobs'
+import Values from './CareerPage/Values'
+import Notifications from './HomePage/Notifications'
 
 export default function CareerPage() {
   return (
     <div>
-      <Navbar />
-      <div className="text-6xl text-center m-16 leading-tight">Welcome To Career Page</div>
+      <Notifications />
+      <Hero />
+      <Testimonials />
+      <Jobs />
+      <Values />
       <Footer />
     </div>
   )
