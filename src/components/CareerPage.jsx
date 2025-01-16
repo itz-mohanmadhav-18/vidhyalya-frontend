@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
-import Navbar from './HomePage/NavBar'
 import Footer from './HomePage/Footer'
+import Hero from './CareerPage/HeroSection'
+import Testimonials from './CareerPage/Testimonials'
+import Jobs from './CareerPage/Jobs'
+import Values from './CareerPage/Values'
+import Notifications from './HomePage/Notifications'
 import ContactUsForm from './HomePage/ContactUsForm';
 
 export default function CareerPage() {
@@ -16,8 +20,11 @@ export default function CareerPage() {
   return (
 
     <div>
-      <Navbar />
-      <div className="text-6xl text-center m-16 leading-tight">Welcome To Career Page</div>
+      <Notifications />
+      <Hero />
+      <Testimonials />
+      <Jobs />
+      <Values />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </div>
