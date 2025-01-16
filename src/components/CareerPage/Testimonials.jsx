@@ -8,6 +8,7 @@ import teacher3 from '../../assets/teacher3.jpg';
 import teacher4 from '../../assets/teacher4.jpg';
 import teacher5 from '../../assets/teacher5.jpg';
 
+
 const testimonials = [
   { 
     quote: "Working here has been an incredibly fulfilling experience. The support from management and fellow teachers is unparalleled.", 
@@ -40,17 +41,29 @@ const Testimonials = () => {
   const settings = { dots: true, infinite: true, autoplay: true, speed: 500 };
 
   return (
-    <div className="w-screen h-[70vh] text-beige flex flex-col justify-center items-center">
-      <Slider {...settings} className="w-1/2 bg-maroon-text p-3 rounded-lg text-center overflow-visible">
+    <div className="w-screen h-[70vh] text-beige !my-20 flex flex-col justify-center items-center overflow-visible">
+      <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
+        Testimonials
+      </h1>
+      <Slider {...settings} className="w-2/3 p-3 my-6 rounded-lg text-center overflow-visible">
         {testimonials.map((t, index) => (
-          <div key={index} className="p-4 bg-white shadow-lg rounded-lg flex flex-col justify-center items-center">
-            <img 
-              src={t.photo} 
-              alt={`Photo of ${t.author}`} 
-              className="w-24 max-h-24 rounded-full mb-4 object-cover shadow-md"
-            />
-            <p className="text-2xl italic text-gray-700">"{t.quote}"</p>
-            <p className="mt-3 text-lg font-semibold text-gray-900">- {t.author}</p>
+          <div key={index} className="p-4 bg-white shadow-sm rounded-lg flex flex-col justify-center items-center">
+            <div className="relative flex items-center w-full justify-center">
+              {/* Fading Line Before */}
+              <span className="absolute w-1/4 h-0.5 bg-gradient-to-l from-brown to-transparent left-0"></span>
+              {/* Image */}
+              <img 
+                src={t.photo} 
+                alt={`Photo of ${t.author}`} 
+                className="w-24 h-24 rounded-full mb-4 object-cover shadow-md z-10"
+              />
+              {/* Fading Line After */}
+              <span className="absolute w-1/4 h-0.5 bg-gradient-to-l from-transparent to-brown right-0"></span>
+            </div>
+            <div>
+              <p className="text-2xl italic mt-4">"{t.quote}"</p>
+              <p className="mt-3 text-md font-semibold text-gray-600">- {t.author}</p>
+            </div>
           </div>
         ))}
       </Slider>
