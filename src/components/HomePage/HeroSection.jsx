@@ -1,5 +1,5 @@
 import React from 'react';
-import heroImage from '../../assets/hero_image1.png';
+import heroImage from '../../assets/hero_image2.png';
 import '../../index.css'
 
 const HeroSection = () => {
@@ -20,7 +20,7 @@ const HeroSection = () => {
             Apply for Admission
           </a>
         </div>
-        <div className="spin-container xs:-mt-6 sm:-mt-16 md:-mt-0 xs:w-[40vw] sm:w-1/3 md:w-1/4">
+        <div className="spin-container overflow-visible xs:-mt-6 sm:-mt-16 md:-mt-0 xs:w-[40vw] sm:w-1/3 md:w-1/4">
           <img src={heroImage} alt="Hero" className="xs:drop-shadow[1px_1px_0_black]"/>
         </div>
       </div>
