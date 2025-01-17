@@ -6,6 +6,7 @@ import Jobs from './CareerPage/Jobs'
 import Values from './CareerPage/Values'
 import Notifications from './HomePage/Notifications'
 import ContactUsForm from './HomePage/ContactUsForm';
+import JobListings from './CareerPage/JobListings';
 
 export default function CareerPage() {
     const [isContactFormOpen, setContactFormOpen] = useState(false);
@@ -22,6 +23,7 @@ export default function CareerPage() {
     <div>
       <Notifications />
       <Hero />
+      <JobListings />
       <Testimonials />
       <Jobs />
       <Values />
