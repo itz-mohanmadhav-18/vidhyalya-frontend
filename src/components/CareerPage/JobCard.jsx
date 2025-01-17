@@ -1,7 +1,7 @@
 import React from 'react';
 import { Briefcase, FileText, DollarSign, Clock, Send } from 'lucide-react';
 
-const JobCard = ({ title, description, salary, experience, applyLink }) => {
+const JobCard = ({ title, description, salary, experience , openContactForm }) => {
   return (
     <div className="relative p-4 rounded-2xl bg-white shadow-[0_20px_20px_rgba(0,0,0,0.3)] hover:shadow-[0_30px_80px_rgba(0,0,0,0.5)] transition-all duration-300 w-full">
       {/* Icon Section */}
@@ -41,7 +41,7 @@ const JobCard = ({ title, description, salary, experience, applyLink }) => {
       {/* Apply Button */}
       <div className="mt-8 flex justify-end overflow-visible">
         <a
-          href={applyLink}
+          onClick={() => openContactForm()}
           className="bg-gradient-to-r from-brown to-dark-brown text-white py-3 px-10 rounded-full 
                    hover:from-maroon hover:to-maroon-text transition-all duration-300 
                    inline-flex items-center shadow-lg transform hover:-translate-y-1 hover:scale-105 hover:shadow-[2px_2px_0_gray]"

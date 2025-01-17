@@ -7,6 +7,7 @@ import Values from './CareerPage/Values'
 import Notifications from './HomePage/Notifications'
 import ContactUsForm from './HomePage/ContactUsForm';
 import JobListings from './CareerPage/JobListings';
+import TeacherApplicationForm from "./CareerPage/TeacherApplicationForm";
 
 export default function CareerPage() {
     const [isContactFormOpen, setContactFormOpen] = useState(false);
@@ -17,6 +18,8 @@ export default function CareerPage() {
     const closeContactForm = () => {
       setContactFormOpen(false);
     };
+
+    
 
   useEffect(() => {
       const handleScroll = () => {
@@ -53,6 +56,7 @@ export default function CareerPage() {
       <Values />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
+      <TeacherApplicationForm  />
     </div>
   )
 }
