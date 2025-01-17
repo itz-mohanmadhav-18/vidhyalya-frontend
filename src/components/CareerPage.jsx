@@ -49,7 +49,7 @@ export default function CareerPage() {
       <Notifications />
       <Hero />
       <Testimonials />
-      <JobListings />
+      <JobListings id="job-listings" />
       <Values />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />

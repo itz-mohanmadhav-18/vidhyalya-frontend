@@ -8,6 +8,11 @@
     overflow-x: hidden;
 }
 
+html, body {
+  scroll-behavior: smooth; /* Optional, for smoother scrolling */
+}
+
+
 .hidden-scrollbar {
   -ms-overflow-style: none; /* Internet Explorer and Edge */
   scrollbar-width: none; /* Firefox */

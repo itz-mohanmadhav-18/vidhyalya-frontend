@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import logo from '../../assets/logo.png';
 import { Link } from 'react-router-dom';
 
-const NavBar = () => {
+const NavBar = (props) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -10,7 +10,7 @@ const NavBar = () => {
   };
 
   return (
-    <div>
+    <div className={`w-full ${props.className}`}>
       {/* Top Nav */}
       <div className="w-full bg-none">
         <div className="flex justify-between items-center py-2 px-5 ">
