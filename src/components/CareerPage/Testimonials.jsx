@@ -41,7 +41,7 @@ const Testimonials = () => {
   const settings = { dots: true, infinite: true, autoplay: true, speed: 500 };
 
   return (
-    <div className="w-screen h-[70vh] text-beige !my-20 flex flex-col justify-center items-center overflow-visible">
+    <div className="w-screen h-[70vh] text-beige !my-32 flex flex-col justify-center items-center overflow-visible">
       <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
         Testimonials
       </h1>

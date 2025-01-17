@@ -57,7 +57,7 @@ const closeContactForm = () => {
     <div>
     <div id={`${id}`} className="bg-light-brown shadow-[0_0_30px_rgba(0,0,0,0.3)] py-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
+        <h1 className="headings mt-6 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
           Job Openings
         </h1>
 
