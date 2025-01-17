@@ -41,8 +41,14 @@ export default {
         typing: 'typing 2s steps(22) forwards',
         blink: 'blink 1s step-end infinite',
         pulse: 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'rotate-x': 'rotateX 10s linear infinite',
+        'spin-slow': 'spin 10s linear infinite',
       },
       keyframes: {
+        rotateX: {
+          '0%': { transform: 'rotate(0deg)' },
+          '100%': { transform: 'rotate(360deg)' },
+        },
         wiggle: {
           '0%': { transform: 'translateY(30px)' },
           '50%': { transform: 'translateY(-30px)' },
