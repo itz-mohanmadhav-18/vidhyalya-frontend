@@ -6,7 +6,7 @@ const Searchbar = ({ onSearch }) => {
     <input
       type="text"
       placeholder="Search for a job title..."
-      className="bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none shadow-md"
+      className="bg-peach h-12 w-1/2 px-5 pr-10 rounded-full text-md focus:outline-none shadow-[4px_6px_0_maroon]"
       onChange={(e) => onSearch(e.target.value)}
     />
   );
@@ -45,22 +45,22 @@ const [searchQuery, setSearchQuery] = useState("");
   );
 
   return (
-    <div className="bg-gray-100 min-h-screen py-12">
+    <div className="bg-light-brown shadow-[0_0_30px_rgba(0,0,0,0.3)] py-4 min-h-screen">
       <div className="max-w-7xl mx-auto">
-        <h1 className="text-center text-4xl font-bold mb-6 text-gradient bg-gradient-to-r from-maroon-text to-maroon-text">
+        <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
           Job Openings
         </h1>
 
         {/* Searchbar */}
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center my-10 overflow-visible">
           <Searchbar onSearch={setSearchQuery} />
         </div>
 
         {/* Job Cards */}
-        <div className="flex flex-col gap-6 items-center">
+        <div className="flex flex-col gap-4 overflow-visible my-20 items-center">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job, index) => (
-              <div key={index} className="w-full lg:w-[70%]">
+              <div key={index} className="w-full lg:w-[70%] overflow-visible">
                 <JobCard {...job} />
               </div>
             ))

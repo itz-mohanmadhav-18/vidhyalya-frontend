@@ -3,7 +3,6 @@ import "../index.css";
 import Footer from './HomePage/Footer'
 import Hero from './CareerPage/HeroSection'
 import Testimonials from './CareerPage/Testimonials'
-import Jobs from './CareerPage/Jobs'
 import Values from './CareerPage/Values'
 import Notifications from './HomePage/Notifications'
 import ContactUsForm from './HomePage/ContactUsForm';
@@ -49,9 +48,8 @@ export default function CareerPage() {
     <div>
       <Notifications />
       <Hero />
-      <JobListings />
       <Testimonials />
-      <Jobs />
+      <JobListings />
       <Values />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
