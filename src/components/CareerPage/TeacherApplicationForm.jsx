@@ -105,8 +105,8 @@ export default function TeacherApplicationForm({ isOpen, onClose }) {
           }}
         >
           <div className="relative p-6 text-white scrollbar-hidden line-height-[1]">
-            <h2
-              className="text-2xl sm:text-3xl font-bold text-center mb-6 text-white tracking-wider"
+             <h2
+              className="text-2xl sm:text-3xl font-bold text-center mb-6 text-white tracking-wider hidden-scrollbar"
               style={chalkboardText}
             >
               <i className="fas fa-chalkboard-teacher mr-3"></i>
