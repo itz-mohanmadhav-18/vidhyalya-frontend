@@ -128,4 +128,11 @@ html, body {
     }
   }
   
+  .perspective {
+    perspective: 1000px;
+  }
+  .animate-rotate-x {
+    animation: rotateX 10s linear infinite;
+    transform-style: preserve-3d;
+  }
   

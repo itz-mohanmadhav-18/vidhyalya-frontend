@@ -19,7 +19,7 @@ const HeroElement = ({className}) => {
 
   return (
     <div className={`relative w-screen h-screen overflow-visible ${className}`}>
-      <div className="w-screen h-[80vh] text-center bg-maroon shadow-[0_5px_6px_gray] text-beige flex items-center justify-around">
+      <div className="w-screen h-[70vh] text-center bg-maroon shadow-[0_5px_6px_gray] text-beige flex items-center justify-around">
         <div>
           <div
             className="text-7xl font-black leading-tight"
@@ -37,9 +37,9 @@ const HeroElement = ({className}) => {
           </div>
         </div>
         <div className="flex justify-center items-center overflow-visible">
-          <img src={backImage} alt="background" className="w-2/3 drop-shadow-[0_0_100px_beige]" />
+          <img src={backImage} alt="background" className="w-2/3 drop-shadow-[0_0_50px_beige]" />
         </div>
-        <div className="absolute top-[70vh] rounded-md overflow-visible shadow-[5px_10px_8px_gray] z-10">
+        <div className="absolute top-[60vh] rounded-md overflow-visible shadow-[5px_10px_8px_gray] z-10">
           <div className="p-6 flex justify-center items-center flex-col bg-beige shadow-[6px_6px_0_maroon] rounded-md">
             <div className="text-dark-brown font-extrabold m-3 leading-tight text-4xl">
               Explore Roles At Vidyalaya
