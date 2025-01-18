@@ -8,7 +8,7 @@ const Searchbar = ({ onSearch }) => {
     <input
       type="text"
       placeholder="Search for a job title..."
-      className="bg-peach h-12 w-1/2 px-5 pr-10 rounded-full text-md focus:outline-none shadow-[4px_6px_0_maroon]"
+      className="bg-peach h-12 w-3/4 md:w-1/2 px-5 rounded-full text-md focus:outline-none shadow-[4px_6px_0_maroon]"
       onChange={(e) => onSearch(e.target.value)}
     />
   );
@@ -62,12 +62,12 @@ const closeContactForm = () => {
         </h1>
 
         {/* Searchbar */}
-        <div className="flex justify-center my-10 overflow-visible">
+        <div className="flex justify-center md:my-10 overflow-visible">
           <Searchbar onSearch={setSearchQuery} />
         </div>
 
         {/* Job Cards */}
-        <div className="flex flex-col gap-4 overflow-visible my-20 items-center">
+        <div className="flex flex-col gap-4 overflow-visible my-10 md:my-20 items-center">
           {filteredJobs.length > 0 ? (
             filteredJobs.map((job, index) => (
               <div key={index} className="w-full lg:w-[70%] overflow-visible">
@@ -75,7 +75,7 @@ const closeContactForm = () => {
               </div>
             ))
           ) : (
-            <p className="text-gray-600 text-lg">No jobs match your search.</p>
+            <p className="text-white text-lg">No jobs match your search.</p>
           )}
         </div>
       </div>

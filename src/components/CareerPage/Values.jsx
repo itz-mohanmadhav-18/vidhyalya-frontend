@@ -23,11 +23,11 @@ const OurValuesCircular = () => {
   }, []);
 
   return (
-    <div className="min-h-screen mt-20 ">
+    <div className="my-20">
       <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
         Our Core Values
       </h1>
-      <div className="max-w-6xl mx-auto mt-16">
+      <div className="max-w-6xl mx-3 md:mx-auto md:mt-16">
         <div className="relative w-full h-96 flex items-center justify-center">
           {/* Central Globe */}
           <div className="absolute z-10 w-24 h-24 bg-brown rounded-full flex items-center justify-center shadow-lg transform hover:scale-110 transition-transform duration-300">
@@ -50,12 +50,12 @@ const OurValuesCircular = () => {
                   transition: 'transform 0.3s ease-out',
                 }}
               >
-                <div className="w-16 h-16 bg-white rounded-full shadow-lg flex items-center justify-center mb-2 hover:bg-beige transition-colors duration-300">
+                <div className="w-10 h-10 md:w-16 md:h-16 bg-white rounded-full shadow-lg flex items-center justify-center mb-2 hover:bg-beige transition-colors duration-300">
                   <div className="text-brown">
                     {value.icon}
                   </div>
                 </div>
-                <span className="text-sm font-semibold text-dark-brown bg-white px-3 py-1 rounded-full shadow-sm">
+                <span className="text-xs md:text-sm font-semibold text-dark-brown bg-white px-3 py-1 rounded-full shadow-sm">
                   {value.title}
                 </span>
               </div>
