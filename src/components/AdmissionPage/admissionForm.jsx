@@ -146,9 +146,22 @@ export default function StudentAdmissionPage() {
             <option value="" disabled>
               Select Grade Level
             </option>
-            <option value="Elementary">Elementary</option>
-            <option value="Middle School">Middle School</option>
-            <option value="High School">High School</option>
+            <option value="nursery">nursery</option>
+            <option value="kg-1">LKG</option>
+            <option value="kg-2">UKG</option>
+            <option value="1">1st Grade</option>
+            <option value="2">2nd Grade</option>
+            <option value="3">3rd Grade</option>
+            <option value="4">4th Grade</option>
+            <option value="5">5th Grade</option>
+            <option value="6">6th Grade</option>
+            <option value="7">7th Grade</option>
+            <option value="8">8th Grade</option>
+            <option value="9">9th Grade</option>
+            <option value="10">10th Grade</option>
+            <option value="11">11th Grade</option>
+            <option value="12">12th Grade</option>
+
           </select>
         </div>
 
