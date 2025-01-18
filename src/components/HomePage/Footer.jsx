@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../../assets/logo.png";
-
+import { Link } from "react-router-dom";
 const Footer = ({ openContactForm }) => {
   return (
     <footer className="bg-dark-brown text-white p-16 h-fit">
@@ -78,9 +78,11 @@ const Footer = ({ openContactForm }) => {
           </address>
           <p className="mt-2 text-sm">P: 707-792-4700</p>
           <p className="text-sm">F: 707-792-4537</p>
+          < Link to = "/career" >
           <a href="#" className="mt-9 text-lg underline hover:text-light-brown">
             Career Opportunities
           </a>
+           </Link>
         </div>
 
         {/* Links Section */}

@@ -2,7 +2,8 @@ import React,{useState} from 'react'
 import Navbar from './HomePage/NavBar'
 import Footer from './HomePage/Footer'
 import ContactUsForm from './HomePage/ContactUsForm'
-import HeroSection from './AdmissionPage/HeroSection';
+import AdmissionForm from './AdmissionPage/admissionForm';
+import Announcement from './AdmissionPage/announcement';
 
 export default function AdmissionPage() {
       const [isContactFormOpen, setContactFormOpen] = useState(false);
@@ -15,8 +16,9 @@ export default function AdmissionPage() {
       };
   return (
     <div>
-      <Navbar />
-      <HeroSection />
+      <Navbar className = "bg-gradient-to-r from-maroon via-amber-800 to-maroon-text" />
+      < Announcement />
+      < AdmissionForm />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </div>
