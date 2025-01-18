@@ -21,7 +21,7 @@ export default {
         'maroon-text': '#450000',
         'light-white': '#f4f3ee',
         'light-brown': '#c08552',
-        'peach': '#fff9E3',
+        peach: '#fff9E3',
         gray: '#5f7470',
         black: '#333',
         hover: 'rgba(216, 164, 143,0.5)',

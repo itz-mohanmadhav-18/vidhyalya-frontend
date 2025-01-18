@@ -4,6 +4,7 @@ import Footer from './HomePage/Footer'
 import ContactUsForm from './HomePage/ContactUsForm'
 import AdmissionForm from './AdmissionPage/admissionForm';
 import Announcement from './AdmissionPage/announcement';
+import Cutouts from './AdmissionPage/cutouts';
 
 export default function AdmissionPage() {
       const [isContactFormOpen, setContactFormOpen] = useState(false);
@@ -19,6 +20,7 @@ export default function AdmissionPage() {
       <Navbar className = "bg-gradient-to-r from-maroon via-amber-800 to-maroon-text" />
       < Announcement />
       < AdmissionForm />
+      < Cutouts />
       <Footer openContactForm={openContactForm} />
       <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
     </div>
