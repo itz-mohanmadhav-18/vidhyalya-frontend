@@ -49,24 +49,27 @@ const TestimonialCarousel = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Slider {...settings}>
+    <div className="h-screen px-4 py-5 md:py-16 bg-dark-brown">
+        <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-[#fff] to-[#fff]">
+        Guiding Lights
+        </h1>
+      <Slider {...settings} className='overflow-visible px-10 my-10'>
         {testimonials.map((testimonial, index) => (
           <div>
-            <div key={index} className="flex flex-col md:flex-row items-center bg-light-white rounded-lg shadow-lg p-6">
+            <div key={index} className="h-full flex flex-col md:flex-row items-center rounded-lg p-6">
             {/* Left: Image */}
-            <div className="flex-shrink-0">
+            <div className="flex-shrink-0 overflow-visible">
               <img
                 src={testimonial.photo}
                 alt={testimonial.author}
-                className="w-32 h-32 md:w-48 md:h-48 object-cover"
+                className="w-32 h-32 md:w-full md:h-full object-cover rounded-2xl shadow-[5px_5px_0_beige]"
               />
             </div>
             {/* Right: Content */}
-            <div className="mt-4 md:mt-0 md:ml-6 text-center md:text-left">
-              <h3 className="text-indigo-600 font-bold text-xl mt-4">{testimonial.author}</h3>
-              <p className="text-gray font-medium">{testimonial.designation}</p>
-              <p className="text-gray text-lg italic">"{testimonial.quote}"</p>
+            <div className="mt-4 md:mt-0 md:ml-10 text-center md:text-left h-5/6 flex flex-col justify-between drop-shadow-[0_0_30px_beige]">
+              <h3 className="text-peach font-bold font-times text-4xl m-0">{testimonial.author}</h3>
+              <p className="text-beige text-lg italic my-10">"{testimonial.quote}"</p>
+              <p className="text-beige font-medium text-base align-baseline">{testimonial.designation}</p>
             </div>
           </div>
           </div>
