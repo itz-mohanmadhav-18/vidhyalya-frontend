@@ -4,6 +4,7 @@ import Footer from './HomePage/Footer'
 // import { Contact } from 'lucide-react';
 import HeroSection from './AboutPage/HeroSection';
 import ContactUsForm from './HomePage/ContactUsForm';
+import Authoritites from './AboutPage/Authorities';
 
 export default function AboutPage() {
   const [isContactFormopen,setContactFormOpen] = useState(false);
@@ -17,6 +18,7 @@ export default function AboutPage() {
     <div>
       <Navbar className="bg-maroon" />
       <HeroSection />
+      <Authoritites />
       <Footer />
       <ContactUsForm />
     </div>
