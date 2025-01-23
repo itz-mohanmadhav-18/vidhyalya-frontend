@@ -1,4 +1,5 @@
 import React from "react";
+import { FaEye, FaDownload } from "react-icons/fa";
 
 const DisclosurePage = () => {
   const generalInfo = [
@@ -12,14 +13,14 @@ const DisclosurePage = () => {
   ];
 
   const documentsInfo = [
-    { label: 'Affiliation Upgradation Letter', link: 'View/Download' },
-    { label: 'Societies/Trust/Company Registration Certificate', link: 'View/Download' },
-    { label: 'No Objection Certificate (NOC)', link: 'View/Download' },
-    { label: 'Recognition Certificate under RTE Act. 2009', link: 'View/Download' },
-    { label: 'Building Safety Certificate', link: 'View/Download' },
-    { label: 'Fire Safety Certificate', link: 'View/Download' },
-    { label: 'DEO Certificate for Affiliation', link: 'View/Download' },
-    { label: 'Water, Health, and Sanitation Certificates', link: 'View/Download' }
+    { label: 'Affiliation Upgradation Letter', viewLink: '#', downloadLink: '#' },
+    { label: 'Societies/Trust/Company Registration Certificate', viewLink: '#', downloadLink: '#' },
+    { label: 'No Objection Certificate (NOC)', viewLink: '#', downloadLink: '#' },
+    { label: 'Recognition Certificate under RTE Act. 2009', viewLink: '#', downloadLink: '#' },
+    { label: 'Building Safety Certificate', viewLink: '#', downloadLink: '#' },
+    { label: 'Fire Safety Certificate', viewLink: '#', downloadLink: '#' },
+    { label: 'DEO Certificate for Affiliation', viewLink: '#', downloadLink: '#' },
+    { label: 'Water, Health, and Sanitation Certificates', viewLink: '#', downloadLink: '#' }
   ];
 
   const resultAndAcademics = [
@@ -50,9 +51,9 @@ const DisclosurePage = () => {
   ];
 
   const bankAndStaffDetails = [
-    { label: 'Bank Statement', link: 'View/Download' },
-    { label: 'EPFO Challan', link: 'View/Download' },
-    { label: 'Staff Detail', link: 'View/Download' }
+    { label: 'Bank Statement', viewLink: '#', downloadLink: '#' },
+    { label: 'EPFO Challan', viewLink: '#', downloadLink: '#' },
+    { label: 'Staff Detail', viewLink: '#', downloadLink: '#' }
   ];
 
   const styles = {
@@ -61,12 +62,16 @@ const DisclosurePage = () => {
       margin: '0 auto',
       padding: '20px',
       fontFamily: 'Arial, sans-serif',
+      backgroundColor: '#f9f9f9',
     },
     title: {
       color: '#2c3e50',
       textAlign: 'center',
       marginBottom: '30px',
-      fontSize: '2.5rem',
+      fontSize: '3rem',
+      fontWeight: 'bold',
+      textTransform: 'uppercase',
+      letterSpacing: '2px',
     },
     section: {
       marginBottom: '40px',
@@ -80,6 +85,7 @@ const DisclosurePage = () => {
       borderBottom: '2px solid #800000',
       paddingBottom: '10px',
       marginBottom: '20px',
+      fontSize: '1.5rem',
     },
     table: {
       width: '100%',
@@ -100,9 +106,20 @@ const DisclosurePage = () => {
       color: '#800000',
       textDecoration: 'none',
       transition: 'color 0.3s',
+      display: 'flex',
+      alignItems: 'center',
+      gap: '5px',
       '&:hover': {
         color: '#b22222',
         textDecoration: 'underline',
+      },
+    },
+    icon: {
+      fontSize: '1.2rem',
+      cursor: 'pointer',
+      transition: 'color 0.3s',
+      '&:hover': {
+        color: '#b22222',
       },
     },
   };
@@ -137,6 +154,7 @@ const DisclosurePage = () => {
           <thead>
             <tr>
               <th style={styles.th}>Documents/Information</th>
+              <th style={styles.th}>View</th>
               <th style={styles.th}>Download</th>
             </tr>
           </thead>
@@ -145,7 +163,14 @@ const DisclosurePage = () => {
               <tr key={index}>
                 <td style={styles.td}><strong>{item.label}</strong></td>
                 <td style={styles.td}>
-                  <a href="#" style={styles.link}>{item.link}</a>
+                  <a href={item.viewLink} style={styles.link}>
+                    <FaEye style={styles.icon} />
+                  </a>
+                </td>
+                <td style={styles.td}>
+                  <a href={item.downloadLink} style={styles.link}>
+                    <FaDownload style={styles.icon} />
+                  </a>
                 </td>
               </tr>
             ))}
@@ -167,7 +192,9 @@ const DisclosurePage = () => {
               <tr key={index}>
                 <td style={styles.td}><strong>{item.label}</strong></td>
                 <td style={styles.td}>
-                  <a href="#" style={styles.link}>{item.link}</a>
+                  <a href="#" style={styles.link}>
+                    <FaEye style={styles.icon} /> {item.link}
+                  </a>
                 </td>
               </tr>
             ))}
@@ -221,6 +248,7 @@ const DisclosurePage = () => {
           <thead>
             <tr>
               <th style={styles.th}>Information</th>
+              <th style={styles.th}>View</th>
               <th style={styles.th}>Download</th>
             </tr>
           </thead>
@@ -229,7 +257,14 @@ const DisclosurePage = () => {
               <tr key={index}>
                 <td style={styles.td}><strong>{item.label}</strong></td>
                 <td style={styles.td}>
-                  <a href="#" style={styles.link}>{item.link}</a>
+                  <a href={item.viewLink} style={styles.link}>
+                    <FaEye style={styles.icon} />
+                  </a>
+                </td>
+                <td style={styles.td}>
+                  <a href={item.downloadLink} style={styles.link}>
+                    <FaDownload style={styles.icon} />
+                  </a>
                 </td>
               </tr>
             ))}
