@@ -5,6 +5,7 @@ import Footer from './HomePage/Footer'
 import HeroSection from './AboutPage/HeroSection';
 import ContactUsForm from './HomePage/ContactUsForm';
 import Authoritites from './AboutPage/Authorities';
+import Gallery from './AboutPage/Gallery';
 
 export default function AboutPage() {
 
@@ -48,6 +49,7 @@ export default function AboutPage() {
       <Navbar className="bg-maroon" />
       <HeroSection />
       <Authoritites />
+      <Gallery />
       <Footer />
       <ContactUsForm />
     </div>

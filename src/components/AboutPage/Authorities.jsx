@@ -55,8 +55,8 @@ const TestimonialCarousel = () => {
         </h1>
       <Slider {...settings} className='overflow-visible px-10 my-10'>
         {testimonials.map((testimonial, index) => (
-          <div>
-            <div key={index} className="h-full flex flex-col md:flex-row items-center rounded-lg p-6">
+          <div className='overflow-visible'>
+            <div key={index} className="h-full flex flex-col md:flex-row items-center rounded-lg p-6 overflow-visible">
             {/* Left: Image */}
             <div className="flex-shrink-0 overflow-visible">
               <img
