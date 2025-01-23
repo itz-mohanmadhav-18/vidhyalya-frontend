@@ -20,7 +20,7 @@ const HeroSection = () => {
         <img 
           src={back} 
           alt="Rural education" 
-          className="w-full h-fit object-cover rounded-t-full md:rounded-t-none md:rounded-l-full shadow-[0_0_30px_beige]"
+          className="w-full h-fit object-cover rounded-t-full md:rounded-t-none md:rounded-s-full shadow-[0_0_30px_beige]"
         />
       </div>
     </div>
