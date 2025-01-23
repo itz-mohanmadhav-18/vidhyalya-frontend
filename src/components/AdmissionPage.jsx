@@ -17,7 +17,7 @@ export default function AdmissionPage() {
       };
   return (
     <div>
-      <Navbar className = "bg-gradient-to-r from-maroon via-amber-800 to-maroon-text" />
+      <Navbar className = "bg-maroon" />
       < Announcement />
       < AdmissionForm />
       < Cutouts />

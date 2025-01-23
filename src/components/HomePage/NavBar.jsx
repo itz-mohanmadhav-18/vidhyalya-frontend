@@ -51,6 +51,11 @@ const NavBar = (props) => {
                 About
               </li>
             </Link>
+            <Link to="/disclosure">
+              <li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm">
+                Public Disclouser
+              </li>
+            </Link>
           </ul>
 
           {/* Log In Button */}
@@ -85,6 +90,11 @@ const NavBar = (props) => {
             <Link to="/about" onClick={toggleMenu}>
               <li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm">
                 About
+              </li>
+            </Link>
+            <Link to="/disclosure" onClick={toggleMenu}>
+              <li className="px-2 py-1 hover:bg-hover hover:text-white rounded-sm">
+                Public Disclosure
               </li>
             </Link>
           </ul>

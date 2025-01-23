@@ -7,6 +7,7 @@ import ErrorPage from './components/OtherPages/NotFound';
 import UnderDevelopment from './components/OtherPages/underDevelopment';
 import CareerPage from './components/CareerPage';
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import Disclosure from "./components/Disclosure";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/admissions" element={<AdmissionPage />} />
         <Route path="/dashboard" element={<UnderDevelopment />} />
+        <Route path="/disclosure" element={<Disclosure />} />
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </Router>
