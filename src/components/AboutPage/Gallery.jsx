@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+import imageU from '../../assets/vision1.jpeg';
+
 const Gallery = () => {
   const allImages = Array.from({ length: 20 }, (_, i) => ({
     id: i,
@@ -27,7 +29,8 @@ const Gallery = () => {
         {allImages.slice(0, visibleImages).map((image) => (
           <div
             key={image.id}
-            className="bg-light-white rounded-xl w-full h-40 sm:h-48 lg:h-56 transition-transform duration-300 hover:scale-105 shadow-[5px_5px_0_brown] hover:shadow-[7px_7px_0_brown]"
+            style={{ backgroundImage: `url(${imageU})`}}
+            className="bg-light-white bg-cover rounded-xl w-full h-40 sm:h-48 lg:h-56 transition-transform duration-300 hover:scale-105 shadow-[5px_5px_0_brown] hover:shadow-[7px_7px_0_brown]"
           ></div>
         ))}
       </div>
