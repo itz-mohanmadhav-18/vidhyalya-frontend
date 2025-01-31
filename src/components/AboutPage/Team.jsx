@@ -1,20 +1,32 @@
-import React from "react";
+import { useState } from 'react';
 import image from '../../assets/teacher1.jpg';
 
 const FacultyCard = ({ image, name, designation, qualifications }) => {
+  const [isHovered, setIsHovered] = useState(false);
+
   return (
-    <div className="flex bg-white shadow-md rounded-2xl overflow-hidden mb-3 max-w-sm mx-auto p-4">
-      <div className="flex justify-center items-center">
+    <div 
+      className="relative aspect-square overflow-hidden rounded-2xl shadow-lg cursor-pointer group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      <div className="relative w-full h-full overflow-hidden">
         <img
           src={image}
           alt={`${name}'s profile`}
-          className="h-40 w-40 object-cover rounded-full"
+          className={`h-full w-full object-cover transition-transform duration-500 ${
+            isHovered ? 'scale-105' : 'scale-100'
+          } brightness-75 group-hover:brightness-90`}
         />
-      </div>
-      <div className="p-6 flex flex-col justify-center w-2/3">
-        <h2 className="text-xl font-semibold text-light-black">{name}</h2>
-        <p className="text-light-black mt-2">{designation}</p>
-        <p className="text-gray mt-4">{qualifications}</p>
+        <div className="absolute left-0 top-0 h-full right-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-100" />
+        
+        <div className={`absolute bottom-0 left-0 right-0 p-6 text-white transition-all duration-500 ${
+          isHovered ? 'translate-y-0 opacity-100' : 'translate-y-8 opacity-0'
+        }`}> 
+          <h2 className="text-2xl font-bold mb-2">{name}</h2>
+          <p className="font-medium mb-3">{designation}</p>
+          <p className="text-sm">{qualifications}</p>
+        </div>
       </div>
     </div>
   );
@@ -61,22 +73,20 @@ const FacultySection = () => {
   ];
 
   return (
-    <section className="px-4 mb-6">
-      <div>
-        <h1 className="headings mt-5 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
+    <section className="px-4 flex justify-center items-center flex-col gap-6 mb-9">
+      <h1 className="headings mt-5 !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-maroon-text to-maroon-text">
           Our Team
         </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
-          {facultyData.map((faculty) => (
-            <FacultyCard
-              key={faculty.name}
-              image={faculty.image}
-              name={faculty.name}
-              designation={faculty.designation}
-              qualifications={faculty.qualifications}
-            />
-          ))}
-        </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+        {facultyData.map((faculty, index) => (
+          <FacultyCard
+            key={index}
+            image={faculty.image}
+            name={faculty.name}
+            designation={faculty.designation}
+            qualifications={faculty.qualifications}
+          />
+        ))}
       </div>
     </section>
   );

@@ -49,7 +49,7 @@ const Authorities = () => {
   };
 
   return (
-    <div className="h-screen px-4 py-5 md:py-16 bg-maroon overflow-visible">
+    <div className="h-fit md:h-screen px-4 py-5 md:py-16 bg-maroon overflow-visible">
         <h1 className="headings !text-2xl sm:!text-3xl md:!text-4xl lg:!text-5xl justify-self-center w-fit bg-gradient-to-r from-[#fff] to-[#fff]">
         Guiding Lights
         </h1>
