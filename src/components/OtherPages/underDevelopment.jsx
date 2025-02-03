@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom'; 
 
 export default function UnderDevelopment() {
   const [notification, setNotification] = useState('');
+  const navigate = useNavigate(); 
 
   const handleNotifyMe = () => {
     setNotification('You will be notified when this page is ready!');
     setTimeout(() => setNotification(''), 3000);
+  };
+
+  const handleBackToHome = () => {
+    navigate('/'); 
   };
 
   return (
@@ -19,9 +25,15 @@ export default function UnderDevelopment() {
       <p className="text-gray-600 text-lg mb-8 text-center">We're working hard to bring you something amazing. Stay tuned!</p>
       <button
         onClick={handleNotifyMe}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105 mb-4"
       >
         Notify Me
+      </button>
+      <button
+        onClick={handleBackToHome}
+        className="bg-black hover:bg-gray text-white font-semibold py-3 px-6 rounded-lg shadow-md transition duration-300 transform hover:scale-105"
+      >
+        Back to Home
       </button>
       {notification && (
         <p className="text-green-600 mt-6 text-lg font-semibold">{notification}</p>

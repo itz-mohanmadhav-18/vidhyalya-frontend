@@ -5,7 +5,7 @@ const HeroSection = () => {
   return (
     <div className="pt-4 md:pt-0 bg-maroon flex flex-col justify-between items-center md:flex-row overflow-visible">
       {/* Left content section */}
-      <div className="w-full lg:w-1/2 flex items-center px-8 md:px-16">
+      <div className="w-full lg:w-1/2 flex items-center px-8 md:px-16 align-middle">
         <div className="max-w-xl text-center">
           <h1 className="text-2xl md:text-5xl font-bold text-beige md:leading-tight lg:leading-tight mb-6">
             Empowering <span className="text-peach">Rural Education</span>, One Child at a Time
@@ -16,7 +16,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="md:w-1/2 relative overflow-visible">
+      <div className="md:w-1/2 relative overflow-visible mt-5">
         <img 
           src={back} 
           alt="Rural education" 
