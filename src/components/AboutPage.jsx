@@ -5,7 +5,7 @@ import Footer from './HomePage/Footer'
 import HeroSection from './AboutPage/HeroSection';
 import ContactUsForm from './HomePage/ContactUsForm';
 import Authoritites from './AboutPage/Authorities';
-import Gallery from './AboutPage/Gallery';
+import Gallery from './AboutPage/Gall';
 import InfrastructureMetrics from './AboutPage/Infrastructure';
 import Team from './AboutPage/Team';
 
