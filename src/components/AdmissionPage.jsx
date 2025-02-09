@@ -1,10 +1,10 @@
-import React,{useState} from 'react'
+import React,{useState, useEffect} from 'react'
 import Navbar from './HomePage/NavBar'
 import Footer from './HomePage/Footer'
-import ContactUsForm from './HomePage/ContactUsForm'
-import AdmissionForm from './AdmissionPage/admissionForm';
-import Announcement from './AdmissionPage/announcement';
-import Cutouts from './AdmissionPage/cutouts';
+import Hero from './AdmissionPage/HeroSection';
+import Eli from './AdmissionPage/Eligibility';
+import Pro from './AdmissionPage/Procedure';
+
 
 export default function AdmissionPage() {
       const [isContactFormOpen, setContactFormOpen] = useState(false);
@@ -14,15 +14,38 @@ export default function AdmissionPage() {
     
       const closeContactForm = () => {
         setContactFormOpen(false);
-      };
+      }; 
+        useEffect(() => {
+            const handleScroll = () => {
+              document.querySelectorAll(".headings").forEach((heading) => {
+                const rect = heading.getBoundingClientRect();
+                const start = window.innerHeight * 0.1;
+                const end = window.innerHeight * 0.8;
+        
+                if (rect.top >= start && rect.top <= end) {
+                  // Calculate progress between start and end
+                  const progress = (rect.top - start) / (end - start);
+                  heading.style.backgroundSize = `${100 - progress * 100}% 100%`;
+                } else if (rect.top < start) {
+                  heading.style.backgroundSize = "100% 100%"; // Fully revealed
+                } else {
+                  heading.style.backgroundSize = "0% 100%"; // Fully hidden
+                }
+              });
+            };
+        
+            window.addEventListener("scroll", handleScroll);
+      
+            return () => {
+              window.removeEventListener("scroll", handleScroll);
+            };
+      }, []);
   return (
     <div>
-      <Navbar className = "bg-maroon" />
-      < Announcement />
-      < AdmissionForm />
-      < Cutouts />
-      <Footer openContactForm={openContactForm} />
-      <ContactUsForm isOpen={isContactFormOpen} onClose={closeContactForm} />
+      <Hero />
+      <Eli />
+      <Pro />
+      <Footer />
     </div>
   )
 }

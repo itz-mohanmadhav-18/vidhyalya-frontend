@@ -23,8 +23,8 @@ function App() {
         <Route path="/" element={<Homepage />} />
         <Route path="/career" element={<CareerPage />} />
         <Route path="/about" element={<AboutPage />} />
-        {/* <Route path="/admissions" element={<AdmissionPage />} /> */}
-        <Route path="/admissions" element={<UnderDevelopment />} />
+        <Route path="/admissions" element={<AdmissionPage />} />
+        {/* <Route path="/admissions" element={<UnderDevelopment />} /> */}
         <Route path="/dashboard" element={<UnderDevelopment />} />
         <Route path="/disclosure" element={<Disclosure />} />
         <Route path="copyright" element={<Copyright />} />
